@@ -1,0 +1,31 @@
+add target input
+addi zero 0
+addi one 1
+push target
+pushra
+j Loop
+pop answer
+add output answer zero
+Loop pop ra
+pop target
+beqi basecase0 target 0
+beqi basecase1 target 1
+j normal
+basecase0 push zero
+basecase1 push one
+j ra
+normal subi levela target 1
+subi levelb target 2
+push levelb
+push ra
+push levela
+pushra
+j Loop
+pop levela
+pushra
+j Loop
+pop levelb
+pop ra
+add target levela levelb
+push target
+j ra

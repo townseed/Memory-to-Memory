@@ -1,0 +1,59 @@
+addi n -2 0
+mov v 2
+sili m n 15
+bnei END m 0
+mov v 3
+push n
+push v
+pushra 
+j BD
+pop m
+bnei END m 0
+mov v 5
+push n
+push v
+pushra 
+j BD
+pop m
+bnei END m 0
+mov v 7
+push n
+push v
+pushra 
+j BD
+pop m
+bnei END m 0
+mov v 11
+push n
+push v
+pushra 
+j BD
+pop m
+bnei END m 0
+mov v 13
+push n
+push v
+pushra 
+j BD
+pop m
+bnei END m 0
+mov v 17
+push n
+push v
+pushra 
+j BD
+pop m
+bnei END m 0
+BD pop ra
+pop b
+pop a
+mov i 11
+F sll x b i
+bge E x a
+A sub a a x
+bge A a x
+E addi i i -1
+bnei F i -1
+push a
+ja ra
+END addi t v 0

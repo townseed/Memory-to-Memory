@@ -1,0 +1,10 @@
+mov n 5
+mov m 2
+Loop push n
+push m
+pushra
+j gcd
+pop c
+beqi L c 1
+addi m m 1
+j Loop
